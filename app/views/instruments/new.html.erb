@@ -1,0 +1,15 @@
+<h1>instruments#new</h1>
+<h2>Novo instrumento</h2>
+
+<%= simple_form_for(@instrument) do |f| %>
+  <%= f.input :question_1, collection: Instrument.instrument_questions.keys, class: 'drop-down', label: "Escolha a questão 1" %>
+  <%= f.input :question_2, collection: Instrument.instrument_questions.keys, class: 'drop-down', label: "Escolha a questão 2" %>
+  <%= f.input :question_3, collection: Instrument.instrument_questions.keys, class: 'drop-down', label: "Escolha a questão 3" %>
+  <%= f.input :question_4, collection: Instrument.instrument_questions.keys, class: 'drop-down', label: "Escolha a questão 4" %>
+  <%= f.input :question_5, collection: Instrument.instrument_questions.keys, class: 'drop-down', label: "Escolha a questão 5" %>
+  <%= f.button :submit, label: 'Gerar Instrumento', class: 'btn btn-success w-100' %>
+<% end %>
+
+
+
+<%= link_to "Voltar", root_path %>
