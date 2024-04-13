@@ -30,5 +30,10 @@ module VetorEditora
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # config.after_initialize do
+    #   Users::RegistrationsController.create_default_user
+    # end
+
   end
 end
